@@ -5,28 +5,8 @@ var newMap;
  * Initialize map as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initHTML();
   initMap();
 });
-
-/**
- * Initial HTML to be added in all HTMLs - meta tags viewport info
- */
-initHTML = () => {
-  let metaCharset = document.createElement('meta');
-  let metaIECompatible = document.createElement('meta');
-  let metaViewport = document.createElement('meta');
-
-  metaCharset.setAttribute('charset','UTF-8');
-  metaIECompatible.setAttribute('http-equiv','x-ua-compatible');
-  metaIECompatible.setAttribute('content','ie=edge');
-  metaViewport.setAttribute('name','viewport');
-  metaViewport.setAttribute('content','width=device-width, initial-scale=1, maximum-scale=1');
-
-  document.head.appendChild(metaCharset);
-  document.head.appendChild(metaIECompatible);
-  document.head.appendChild(metaViewport);
-}
 
 /**
  * Initialize leaflet map
@@ -109,6 +89,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = DBHelper.imageNameForRestaurant(restaurant);
+  image.title = DBHelper.imageNameForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;

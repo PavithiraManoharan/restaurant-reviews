@@ -8,30 +8,10 @@ var markers = []
  * Fetch basic HTML, neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initHTML();
   initMap(); // added
   fetchNeighborhoods();
   fetchCuisines();
 });
-
-/**
- * Initial HTML to be added in all HTMLs - meta tags viewport info
- */
-initHTML = () => {
-  let metaCharset = document.createElement('meta');
-  let metaIECompatible = document.createElement('meta');
-  let metaViewport = document.createElement('meta');
-
-  metaCharset.setAttribute('charset','UTF-8');
-  metaIECompatible.setAttribute('http-equiv','x-ua-compatible');
-  metaIECompatible.setAttribute('content','ie=edge');
-  metaViewport.setAttribute('name','viewport');
-  metaViewport.setAttribute('content','width=device-width, initial-scale=1');
-
-  document.head.appendChild(metaCharset);
-  document.head.appendChild(metaIECompatible);
-  document.head.appendChild(metaViewport);
-}
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -181,6 +161,8 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = DBHelper.imageNameForRestaurant(restaurant);
+  image.title = DBHelper.imageNameForRestaurant(restaurant);
   li.append(image);
 
   const name = document.createElement('h1');

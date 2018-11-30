@@ -321,7 +321,7 @@ nav h1 a {
     padding: 20px 15px;
   }
   .leaflet-top, .leaflet-bottom {
-    z-index: 999 !important;
+    z-index: 999;
   }
   .filter-options h2 {
     width: 100%;

@@ -154,6 +154,19 @@ class DBHelper {
   }
 
   /**
+   * TODO : Restaurant image srcset.
+   */
+  static imageSrcsetForRestaurant(restaurant) {
+  
+  }
+
+  /**
+   * Restaurant image Name.
+   */
+  static imageNameForRestaurant(restaurant) {
+    return(`${restaurant.name}, ${restaurant.neighborhood}`);
+  }
+  /**
    * Map marker for a restaurant.
    */
    static mapMarkerForRestaurant(restaurant, map) {
