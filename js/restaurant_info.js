@@ -5,8 +5,28 @@ var newMap;
  * Initialize map as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
+  initHTML();
   initMap();
 });
+
+/**
+ * Initial HTML to be added in all HTMLs - meta tags viewport info
+ */
+initHTML = () => {
+  let metaCharset = document.createElement('meta');
+  let metaIECompatible = document.createElement('meta');
+  let metaViewport = document.createElement('meta');
+
+  metaCharset.setAttribute('charset','UTF-8');
+  metaIECompatible.setAttribute('http-equiv','x-ua-compatible');
+  metaIECompatible.setAttribute('content','ie=edge');
+  metaViewport.setAttribute('name','viewport');
+  metaViewport.setAttribute('content','width=device-width, initial-scale=1, maximum-scale=1');
+
+  document.head.appendChild(metaCharset);
+  document.head.appendChild(metaIECompatible);
+  document.head.appendChild(metaViewport);
+}
 
 /**
  * Initialize leaflet map
@@ -35,21 +55,21 @@ initMap = () => {
   });
 }
 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
+//  window.initMap = () => {
+//   fetchRestaurantFromURL((error, restaurant) => {
+//     if (error) { // Got an error!
+//       console.error(error);
+//     } else {
+//       self.map = new google.maps.Map(document.getElementById('map'), {
+//         zoom: 16,
+//         center: restaurant.latlng,
+//         scrollwheel: false
+//       });
+//       fillBreadcrumb();
+//       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
+//     }
+//   });
+// }
 
 /**
  * Get current restaurant from page URL.
