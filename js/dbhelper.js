@@ -154,10 +154,17 @@ class DBHelper {
   }
 
   /**
-   * TODO : Restaurant image srcset.
+   * Restaurant image srcset.
    */
   static imageSrcsetForRestaurant(restaurant) {
-  
+    return (`${restaurant.srcset}`);
+  }
+
+  /**
+   * Restaurant image sizes.
+   */
+  static imageSizesForRestaurant(restaurant) {
+    return (`${restaurant.sizes}`);
   }
 
   /**

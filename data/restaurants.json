@@ -3,8 +3,9 @@
     "id": 1,
     "name": "Mission Chinese Food",
     "neighborhood": "Manhattan",
-    "photograph": "1.jpg",
-    "photograph_set": ["1_xs.jpg","1_sm.jpg"], //TODO
+    "photograph": "1/1.jpg",
+    "srcset": "/img/1/1_200.jpg 200w, /img/1/1_353.jpg 353w, /img/1/1_467.jpg 467w, /img/1/1_578.jpg 578w, /img/1/1_680.jpg 680w, /img/1/1_788.jpg 788w, /img/1/1.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "171 E Broadway, New York, NY 10002",
     "latlng": {
       "lat": 40.713829,
@@ -44,6 +45,8 @@
     "name": "Emily",
     "neighborhood": "Brooklyn",
     "photograph": "2.jpg",
+    "srcset": "/img/2/2_200.jpg 200w, /img/2/2_323.jpg 323w, /img/2/2_420.jpg 420w, /img/2/2_501.jpg 501w, /img/2/2_574.jpg 574w, /img/2/2_645.jpg 645w, /img/2/2_708.jpg 708w, /img/2/2_776.jpg 776w, /img/2/2.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "919 Fulton St, Brooklyn, NY 11238",
     "latlng": {
       "lat": 40.683555,
@@ -83,6 +86,8 @@
     "name": "Kang Ho Dong Baekjeong",
     "neighborhood": "Manhattan",
     "photograph": "3.jpg",
+    "srcset": "/img/3/3_200.jpg 200w, /img/3/3_357.jpg 357w, /img/3/3_480.jpg 480w, /img/3/3_592.jpg 592w, /img/3/3_702.jpg 702w, /img/3/3.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "1 E 32nd St, New York, NY 10016",
     "latlng": {
       "lat": 40.747143,
@@ -122,6 +127,8 @@
     "name": "Katz's Delicatessen",
     "neighborhood": "Manhattan",
     "photograph": "4.jpg",
+    "srcset": "/img/4/4_200.jpg 200w, /img/4/4_354.jpg 354w, /img/4/4_474.jpg 474w, /img/4/4_578.jpg 578w, /img/4/4_667.jpg 667w, /img/4/4_752.jpg 752w, /img/4/4.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "205 E Houston St, New York, NY 10002",
     "latlng": {
       "lat": 40.722216,
@@ -161,6 +168,8 @@
     "name": "Roberta's Pizza",
     "neighborhood": "Brooklyn",
     "photograph": "5.jpg",
+    "srcset": "/img/5/5_200.jpg 200w, /img/5/5_364.jpg 364w, /img/5/5_492.jpg 492w, /img/5/5_605.jpg 605w, /img/5/5_722.jpg 722w, /img/5/5.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "261 Moore St, Brooklyn, NY 11206",
     "latlng": {
       "lat": 40.705089,
@@ -200,6 +209,8 @@
     "name": "Hometown BBQ",
     "neighborhood": "Brooklyn",
     "photograph": "6.jpg",
+    "srcset": "/img/6/6_200.jpg 200w, /img/6/6_322.jpg 322w, /img/6/6_419.jpg 419w, /img/6/6_502.jpg 502w, /img/6/6_577.jpg 577w, /img/6/6_646.jpg 646w, /img/6/6_714.jpg 714w, /img/6/6_781.jpg 781w, /img/6/6.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "454 Van Brunt St, Brooklyn, NY 11231",
     "latlng": {
       "lat": 40.674925,
@@ -239,6 +250,8 @@
     "name": "Superiority Burger",
     "neighborhood": "Manhattan",
     "photograph": "7.jpg",
+    "srcset": "/img/7/7_200.jpg 200w, /img/7/7_372.jpg 372w, /img/7/7_503.jpg 503w, /img/7/7_615.jpg 615w, /img/7/7_741.jpg 741w, /img/7/7.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "430 E 9th St, New York, NY 10009",
     "latlng": {
       "lat": 40.727397,
@@ -278,6 +291,8 @@
     "name": "The Dutch",
     "neighborhood": "Manhattan",
     "photograph": "8.jpg",
+    "srcset": "/img/8/8_200.jpg 200w, /img/8/8_324.jpg 324w, /img/8/8_413.jpg 413w, /img/8/8_516.jpg 516w, /img/8/8_601.jpg 601w, /img/8/8_692.jpg 692w, /img/8/8_778.jpg 778w, /img/8/8.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "131 Sullivan St, New York, NY 10012",
     "latlng": {
       "lat": 40.726584,
@@ -317,6 +332,8 @@
     "name": "Mu Ramen",
     "neighborhood": "Queens",
     "photograph": "9.jpg",
+    "srcset": "/img/9/9_200.jpg 200w, /img/9/9_404.jpg 404w, /img/9/9_553.jpg 553w, /img/9/9_713.jpg 713w, /img/9/9.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "1209 Jackson Ave, Queens, NY 11101",
     "latlng": {
       "lat": 40.743797,
@@ -356,6 +373,8 @@
     "name": "Casa Enrique",
     "neighborhood": "Queens",
     "photograph": "10.jpg",
+    "srcset": "/img/10/10_200.jpg 200w, /img/10/10_376.jpg 376w, /img/10/10_512.jpg 512w, /img/10/10_625.jpg 625w, /img/10/10_725.jpg 725w, /img/10/10.jpg 800w",
+    "sizes" : "(max-width: 800px) 100vw, 800px",
     "address": "5-48 49th Ave, Queens, NY 11101",
     "latlng": {
       "lat": 40.743394,
