@@ -87,7 +87,7 @@ self.addEventListener('install', function(event) {
 /**
  * Return files from Cache if present, otherwise fetch from network
  */
-self.addEventListener('fetch', function(e) {
+self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request).then(function(response) {
             if(response) {
