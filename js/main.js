@@ -21,7 +21,7 @@ fetchNeighborhoods = () => {
     if (error) { // Got an error
       console.error(error);
     } else {
-      self.neighborhoods = neighborhoods;
+      self.neighborhoods = neighborhoods;   
       fillNeighborhoodsHTML();
     }
   });
@@ -75,13 +75,14 @@ initMap = () => {
   self.newMap = L.map('map', {
         center: [40.722216, -73.987501],
         zoom: 12,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        keyboard: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoicGF2aXRoaXJhbWFub2hhcmFuIiwiYSI6ImNqcDN4aGs4ZTBtcWEza3J3Ym5lNG55ZDIifQ.p3WSClNI3gnlBmTaytz9KQ',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-      '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+      '<a aria-label="License - Mapbox API" href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
       'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     id: 'mapbox.streets'
   }).addTo(newMap);
@@ -195,6 +196,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+    //Map markers accessible when enter key pressed
+    marker.on("keypress", function(){
+      if(event.keyCode === 13) {
+        window.location.href = marker.options.url;
+      }
+    });
+   
     function onClick() {
       window.location.href = marker.options.url;
     }

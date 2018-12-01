@@ -6,6 +6,7 @@ var newMap;
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
+
 });
 
 /**
@@ -19,7 +20,8 @@ initMap = () => {
       self.newMap = L.map('map', {
         center: [restaurant.latlng.lat, restaurant.latlng.lng],
         zoom: 16,
-        scrollWheelZoom: false
+        scrollWheelZoom: false,
+        keyboard: false
       });
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
         mapboxToken: 'pk.eyJ1IjoicGF2aXRoaXJhbWFub2hhcmFuIiwiYSI6ImNqcDN4aGs4ZTBtcWEza3J3Ym5lNG55ZDIifQ.p3WSClNI3gnlBmTaytz9KQ',

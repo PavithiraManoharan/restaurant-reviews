@@ -105,6 +105,9 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
+#map:focus, #map:active, #map:hover {
+  outline: -webkit-focus-ring-color auto 5px;
+}
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
@@ -295,7 +298,7 @@ nav h1 a {
     margin: 15px 0;
   }
   .inside #footer {
-    width: %;
+    width: calc(100% - 40px);
   }
 }
 
@@ -348,11 +351,6 @@ nav h1 a {
     width: 45%;
     margin: 15px 0;
   }
-
-  .inside #footer {
-    width: calc(100% - 40px);
-    padding: 20px;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -361,5 +359,7 @@ nav h1 a {
     margin-bottom: 30px;
   }
   
-
+  .inside #footer {
+    width: 50%;
+  }
 }
